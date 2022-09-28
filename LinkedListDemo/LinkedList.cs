@@ -15,7 +15,7 @@ namespace LinkedListDemo
             if (head==null)
             {
                 head = newnode;
-                Console.WriteLine("{0} new Node inserted into LinkedList", data);
+                //Console.WriteLine("{0} new Node inserted into LinkedList", data);
             }
             else
             {
@@ -43,7 +43,40 @@ namespace LinkedListDemo
             AddLast(data);
         }
 
-        public void Display()
+        public void InsertAtPerticularPosition(int data, int position)
+        {
+            Node newNode = new Node(data);
+            newNode.data = data;
+            newNode.next = null;
+
+            if (position < 1)
+            {
+                Console.WriteLine("Position sholud be greater");
+            }
+            else if (position == 1)
+            {
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                {
+                    Node temp = new Node(data);
+                    temp = this.head;
+                    while (position > 2)
+                    {
+                        temp = temp.next;
+                        position--;
+                    }
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+            }
+            
+        }
+
+            
+            public void Display()
         {
             Node temp = head;
             if(temp==null)

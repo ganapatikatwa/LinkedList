@@ -6,9 +6,11 @@
         {
             Console.WriteLine("Computation of Linked List");
             LinkedList linkedlist = new LinkedList();
-            linkedlist.Append(56);
-            linkedlist.Append(30);
-            linkedlist.Append(70);
+            linkedlist.AddLast(56);
+            //linkedlist.AddLast(30);
+            linkedlist.AddLast(70);
+            linkedlist.Display();
+            linkedlist.InsertAtPerticularPosition(30, 2);
             linkedlist.Display();
         }
     }
