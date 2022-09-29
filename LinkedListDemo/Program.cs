@@ -10,7 +10,7 @@
             linkedlist.AddLast(30);
             linkedlist.AddLast(70);
             linkedlist.Display();
-            linkedlist.RemoveFirst();
+            linkedlist.RemoveLast();
             linkedlist.Display();
         }
     }
